@@ -1,9 +1,11 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
+import UnderConstructionAlert from './UnderConstructionAlert'
+import jsonData from '../../public/selangor.json'
 
 async function getData() {
-    const data = await fetch('http://localhost:3000/api/kolam')
-    const response = data.json()
+    const response = JSON.parse(JSON.stringify(jsonData))
     return response
 }
 
@@ -32,6 +34,8 @@ const Direktori =async () => {
     
     return (
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            {/* To remove below once completed */}
+            <UnderConstructionAlert/>
             <h1 className="text-center text-3xl tracking-tight text-gray-900">
             Direktori Kolam Memancing
             </h1>
