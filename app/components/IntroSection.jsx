@@ -25,7 +25,7 @@ const KOLAM = [
                 path: [ '/assets/kolam69.jpg']
             },
             {
-                name: 'Kolam Memancing Ikan Gansaan',
+                name: 'Kolam Memancing Gansaan',
                 fish: ['siakap', 'jenahak', 'kerapu'],
                 fees: [ 80, 120 ],
                 location: 'Telok Panglima Garang, SEL',
