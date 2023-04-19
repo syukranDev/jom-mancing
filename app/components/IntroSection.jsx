@@ -1,7 +1,10 @@
+'use client'
+
 import Image from "next/image"
 import { GrLocationPin } from 'react-icons/gr'
 import { FaFish, FaRegMoneyBillAlt } from 'react-icons/fa'
 import {AiOutlineLink } from 'react-icons/ai'
+import UnderConstructionAlert from "./UnderConstructionAlert"
 
 const KOLAM = [
     { 
@@ -56,9 +59,13 @@ const KOLAM = [
 ]
 
 const IntroSection = () => {
+
   return (
     <header className="">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            {/* To remove once completed */}
+           <UnderConstructionAlert/>
+            {/*  */}
             <h1 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
                 Jom memancing
