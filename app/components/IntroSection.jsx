@@ -73,18 +73,18 @@ const IntroSection = () => {
                 {" "}di kolam <span className="underline decoration-sky-500">berdekatan anda!</span> 🐟 🎣
             </h1>
             <p className="subpixel-antialiased font-sans text-lg text-gray-500 text-center justify-center mt-5">
-                Kami mudahkan anda untuk mencari tempat yang terbaik untuk memancing.
+                Kami mudahkan anda untuk mencari 'port' yang terbaik untuk memancing.
             </p>
 
 
-            <div class="p-3 font-mono">
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8">
+            <div className="p-3 font-mono">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8">
                     { KOLAM[0].Selangor.map((kolam, idx) => (
                         <div key={idx} className="p-4 ">
-                            <div class="item-center justify-center max-w-sm rounded overflow-hidden shadow-md ">
-                                <Image class="h-auto" src={kolam.path[0]} width={2048} height={1536} alt="null"/>
-                                <div class="px-6 py-4">
-                                    <div class="font-bold text-xl mb-2">
+                            <div className="item-center justify-center max-w-sm rounded overflow-hidden shadow-md ">
+                                <Image className="h-auto" src={kolam.path[0]} width={2048} height={1536} alt="null"/>
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">
                                         {kolam.name}
                                     </div>
                                     <ul className="ml-1 mb-2 text-gray-700">
