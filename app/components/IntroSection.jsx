@@ -54,6 +54,15 @@ const KOLAM = [
                 link: 'https://www.facebook.com/profile.php?id=100053518543457',
                 path: [ '/assets/kolamlcs.png'],
             },
+            {
+                name: 'LS Fishing Pond',
+                fish: ['siakap', 'jenahak', 'kerapu-XXL', 'udang'],
+                fees: [ 120 ],
+                location: 'Telok Panglima Garang, SEL',
+                direction: 'https://goo.gl/maps/AGt4NnVT2MxXEnhaA',
+                link: 'https://www.facebook.com/profile.php?id=100053518543457',
+                path: [ '/assets/kolamlcs.png'],
+            },
         ]
     }
 ]
@@ -73,7 +82,7 @@ const IntroSection = () => {
                 {" "}di kolam <span className="underline decoration-sky-500">berdekatan anda!</span> 🐟 🎣
             </h1>
             <p className="subpixel-antialiased font-sans text-lg text-gray-500 text-center justify-center mt-5">
-                Kami mudahkan anda untuk mencari tempat yang terbaik untuk memancing.
+                Kami mudahkan anda untuk mencari &#39;port&#39; yang terbaik untuk memancing.
             </p>
 
 
