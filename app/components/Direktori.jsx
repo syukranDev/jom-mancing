@@ -54,65 +54,58 @@ const Direktori =async () => {
 
 
             <motion.div initial="hidden" animate="visible" variants={{
-                        hidden: {
-                            scale: .8,
-                            opacity: 0
-                        },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                            delay: .4
-                            }
-                        },
-                    }}>
-            {/* Animate goes here */}
-
-            {/* ================= */}
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">
-                                Nama Kolam
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Lokasi
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Telefon
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Direction
-                            </th>
-                        </tr>
-                    </thead>
-                    
-                    { kolamData.map((kolam, idx) => (
-                        <tbody key={idx}>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                               {kolam.title}
-                            </th>
-                            <td class="px-6 py-4">
-                                {(kolam.city? kolam.city + ', ' : '') + kolam.state + ", " + kolam.countryCode}
-                            </td>
-                            <td class="px-6 py-4">
-                                {kolam.phone ? kolam.phone : 'N/A'}
-                            </td>
-                            <td class="px-6 py-4">
-                                <Link href={kolam.url} className='hover:underline hover:text-sky-500'>Click Me!</Link>
-                            </td>
-                        </tr>
-                    </tbody>
-                    ))}
-                </table>
-            </div>
-                       
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                    delay: .4
+                    }
+                },
+            }}>
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Nama Kolam
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Lokasi
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Telefon
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Direction
+                                </th>
+                            </tr>
+                        </thead>
+                        { kolamData.map((kolam, idx) => (
+                            <tbody key={idx}>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {kolam.title}
+                                </th>
+                                <td class="px-6 py-4">
+                                    {(kolam.city? kolam.city + ', ' : '') + kolam.state + ", " + kolam.countryCode}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {kolam.phone ? kolam.phone : 'N/A'}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <Link href={kolam.url} className='hover:underline hover:text-sky-500'>Click Me!</Link>
+                                </td>
+                            </tr>
+                        </tbody>
+                        ))}
+                    </table>
+                </div>
             </motion.div>
-
             <div>
-
             </div>
         </div>
       
