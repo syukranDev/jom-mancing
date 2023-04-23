@@ -13,13 +13,13 @@ const MapKolam = () => {
 
     return (
         <div className="mx-auto max-w-7xl px-4 py-6  lg:px-8" >
-            <div className='shadow mx-3 justify-center text-center'>
             <h1 className="-mt-7 mb-5 text-center text-3xl font-bold tracking-tight text-gray-900">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
                      Fakta Menarik: 
                     </span>
                     {" "}terdapat lebih <span className="underline decoration-sky-500">12,638 kolam di Malaysia!</span> ✨
             </h1>
+            <div className='shadow mx-3 justify-center text-center'>
             {/* Map goes here */}
             <div className='rounded-2xl shadow-md'>
                 <Map
