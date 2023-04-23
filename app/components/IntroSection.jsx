@@ -5,6 +5,7 @@ import { GrLocationPin } from 'react-icons/gr'
 import { FaFish, FaRegMoneyBillAlt } from 'react-icons/fa'
 import {AiOutlineLink } from 'react-icons/ai'
 import UnderConstructionAlert from "./UnderConstructionAlert"
+import { motion } from 'framer-motion';
 
 const KOLAM = [
     { 
@@ -72,20 +73,31 @@ const IntroSection = () => {
   return (
     <header className="">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            {/* To remove once completed */}
-           <UnderConstructionAlert/>
-            {/*  */}
-            <h1 className="text-center text-3xl font-bold tracking-tight text-gray-900">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
-                Jom memancing
-                </span>
-                {" "}di kolam <span className="underline decoration-sky-500">berdekatan anda!</span> 🐟 🎣
-            </h1>
-            <p className="subpixel-antialiased font-sans text-lg text-gray-500 text-center justify-center mt-5">
-                Kami mudahkan anda untuk mencari &#39;port&#39; yang terbaik untuk memancing.
-            </p>
-
-
+            <motion.div initial="hidden" animate="visible" variants={{
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        delay: .4
+                    }
+                },
+            }}>
+                {/* To remove once completed */}
+                <UnderConstructionAlert/>
+                {/*  */}
+                <h1 className="text-center text-3xl font-bold tracking-tight text-gray-900">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ...">
+                    Jom memancing
+                    </span>
+                    {" "}di kolam <span className="underline decoration-sky-500">berdekatan anda!</span> 🐟 🎣
+                </h1>
+                <p className="subpixel-antialiased font-sans text-lg text-gray-500 text-center justify-center mt-5">
+                    Kami mudahkan anda untuk mencari &#39;port&#39; yang terbaik untuk memancing.
+                </p>
             <div class="p-3 font-mono">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8">
                     { KOLAM[0].Selangor.map((kolam, idx) => (
@@ -121,6 +133,7 @@ const IntroSection = () => {
                     ))}
                 </div>
             </div>
+            </motion.div>
 
             
           </div>

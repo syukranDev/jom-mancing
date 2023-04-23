@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import UnderConstructionAlert from './UnderConstructionAlert'
 import jsonData from '../../public/selangor.json'
+import { motion } from 'framer-motion'
 
 async function getData() {
     const response = JSON.parse(JSON.stringify(jsonData))
@@ -50,6 +51,24 @@ const Direktori =async () => {
                 ))}
 
             </div>
+
+
+            <motion.div initial="hidden" animate="visible" variants={{
+                        hidden: {
+                            scale: .8,
+                            opacity: 0
+                        },
+                        visible: {
+                            scale: 1,
+                            opacity: 1,
+                            transition: {
+                            delay: .4
+                            }
+                        },
+                    }}>
+            {/* Animate goes here */}
+
+            {/* ================= */}
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
@@ -68,6 +87,7 @@ const Direktori =async () => {
                             </th>
                         </tr>
                     </thead>
+                    
                     { kolamData.map((kolam, idx) => (
                         <tbody key={idx}>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -88,6 +108,8 @@ const Direktori =async () => {
                     ))}
                 </table>
             </div>
+                       
+            </motion.div>
 
             <div>
 
