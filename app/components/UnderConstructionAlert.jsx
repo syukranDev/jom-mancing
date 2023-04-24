@@ -65,9 +65,9 @@ const UnderConstructionAlert = () => {
                                     We expected to launch serveral excited features in coming weeks, stay tuned!
                                 </p>
                                 <ul class="list-disc text-base leading-relaxed pl-10">
-                                  <li>Login & Register</li>
+                                  <li className='line-through'>Login & Register</li>
                                   <li>User Access Management</li>
-                                  <li>Interactive Map Integration</li>
+                                  <li className='line-through'>Interactive Map Integration</li>
                                   <li>More data from different states</li>
                                   <li>Featured Kolam & Payment Gateway</li>
                                   <li>Muti-languages supports</li>
