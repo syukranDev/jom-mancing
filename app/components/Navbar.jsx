@@ -4,7 +4,7 @@ import { FiHome } from 'react-icons/fi'
 
 const Navbar = () => {
   return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow" >
+        <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow static top-0" >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" className="flex items-center">
                 <img src="https://gcdnb.pbrd.co/images/XlMOOM4bgExS.png?o=1" className="h-8 mr-0.5" alt="Flowbite Logo" />

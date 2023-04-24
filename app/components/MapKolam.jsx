@@ -1,15 +1,36 @@
 'use client'
-import ReactMapboxGl from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker }from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import '../globals.css'
 
+import jsonData from '../../public/selangor.json'
 
+async function getData() {
+    const response = JSON.parse(JSON.stringify(jsonData))
+    return response
+}
 
-const MapKolam = () => {
+const coordinatesHome = [2.914252, 101.535154]
+
+const MapKolam =  async () => {
+    let dataKolam = []
+    let finalData = []
+    const locationKolam = await getData()
+
+    await locationKolam.map(loc => {
+        dataKolam.push(loc.location)
+    })
+
+    dataKolam.map(data => {
+        finalData.push([data.lng , data.lat])
+    })
+
+    
+    // console.log(finalData)
+                    
     const Map = ReactMapboxGl({
         accessToken: 'pk.eyJ1Ijoic3l1a3JhbnNvbGVoIiwiYSI6ImNqdnczbWpmczF5dm8zeW5ua3c5dHMya20ifQ.GDZmRQH1LmOGn7BrcmZ33w',
       });
-
-        
 
     return (
         <div className="mx-auto max-w-7xl px-4 py-6  lg:px-8" >
@@ -28,10 +49,17 @@ const MapKolam = () => {
                     height: '400px',
                     width: '100%',
                     }}
-                    center={[101.63829803466797,
-                        3.228099622270834]}
-                    zoom={[8]}
-                />
+                    center={finalData[3]}
+                    zoom={[9.5]} //10 is just nice
+                >
+                {
+                    finalData.map(data => (
+                        <Marker coordinates={data}>
+                            <div className="marker" /> 
+                        </Marker>  
+                    ))
+                }
+                </Map>
             </div>
 
             </div>

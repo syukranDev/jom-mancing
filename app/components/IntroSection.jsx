@@ -102,7 +102,7 @@ const IntroSection = () => {
             <div class="p-3 font-mono">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-8">
                     { KOLAM[0].Selangor.map((kolam, idx) => (
-                        <div key={idx} className="p-4 ">
+                        <div key={idx} className="p-4 hover:-translate-y-1 transition-transform cursor-pointer">
                             <div class="item-center justify-center max-w-sm rounded-xl overflow-hidden shadow-md ">
                                 <div className="relative">
                                     <Image class="h-auto" src={kolam.path[0]} width={2048} height={1536} alt="null"/>
