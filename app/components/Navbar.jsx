@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow static top-0" >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" className="flex items-center">
-                <img src="https://gcdnb.pbrd.co/images/XlMOOM4bgExS.png?o=1" className="h-8 mr-0.5" alt="Flowbite Logo" />
+                {/* <img src="https://gcdnb.pbrd.co/images/XlMOOM4bgExS.png?o=1" className="h-8 mr-0.5" alt="Flowbite Logo" /> */}
                 <span className="self-center text-2xl font-bold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">JomMengai</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
